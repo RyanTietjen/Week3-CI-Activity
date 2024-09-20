@@ -7,6 +7,8 @@ on:
         branches:
             - main
     workflow_dispatch:
+    # schedule:
+    #     - cron: '0 * * * *' #runs test every hour (disabling for submission purposes)
 
 
 jobs:
