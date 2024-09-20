@@ -1,0 +1,22 @@
+name: Run tests
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            -main
+    workflow_dispatch:
+
+
+jobs:
+    tests:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Install
+              run: npm install
+            - name: Build
+              run: npm run build
+            - name: Run tests
+              run: npm run test
